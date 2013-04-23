@@ -1,3 +1,4 @@
 {
-	"dateFormat": "yyyymmdd"
+	"dateFormat": "yyyymmdd",
+	"dataPrecision": 5
 }
