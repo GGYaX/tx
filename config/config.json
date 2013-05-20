@@ -1,4 +1,19 @@
 {
 	"dateFormat": "yyyymmdd",
-	"dataPrecision": 5
+	"dataPrecision": 5,
+	"tablePrefix":
+	{
+		"3000":
+		{
+			"arrayDesc":["time", "record", "direct", "temp1", "globale", "temp2", "diffus", "temp3", "infra-rouge", "temp4"],
+			"arrayUnit":["TS", "RN", "mV", "mV", "mV", "mV", "mV", "mV", "mV", "mV"],
+			"arrayType":["","","Avg","Avg","Avg","Avg","Avg","Avg","Avg","Avg"]
+		},
+		"1000":
+		{
+			"arrayDesc":["time", "record", "direct", "temp1", "globale", "temp2", "diffus", "temp3", "infra-rouge", "temp4"],
+			"arrayUnit":["TS", "RN", "mV", "mV", "mV", "mV", "mV", "mV", "mV", "mV"],
+			"arrayType":["","","Avg","Avg","Avg","Avg","Avg","Avg","Avg","Avg"]
+		}
+	}
 }
