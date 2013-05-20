@@ -1,5 +1,7 @@
 {
 	"1001": "stringSplitted.length not equal to arrayDesc3000.length(may all data line missing)",
-	"1002": "Data wrong(trou)",
-	"2001": "File not exit"
+	"3001": "Data wrong(trou)",
+	"2001": "File not exit",
+	"2002": "Email configure file went wrong",
+	"2003": "Email can't be sent"
 }
