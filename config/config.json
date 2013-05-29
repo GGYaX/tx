@@ -15,5 +15,16 @@
 			"arrayUnit":["TS", "RN", "mV", "mV", "mV", "mV", "mV", "mV", "mV", "mV"],
 			"arrayType":["","","Avg","Avg","Avg","Avg","Avg","Avg","Avg","Avg"]
 		}
+	},
+	"fileReader":
+	{
+		"path": "/Users/yanxingong/Documents/UTC/P2013/TX/test",
+		"defaultReadFrom": 4,
+		"files":[
+			{
+				"name": "somedata.dat",
+				"readFrom": 4
+			}
+		]
 	}
 }
