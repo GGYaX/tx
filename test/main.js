@@ -16,6 +16,7 @@ try {
 	process.exit(-1);
 }
 
+/* Functions */
 function writeinto(filename, data) {
 	// this function will replace the filename with data
 	if(fs.existsSync(filename)) {
@@ -31,6 +32,32 @@ function writeinto(filename, data) {
 	}
 }
 
+
+function checkFileInMyArray(array, filename) {
+	for(var i = 0; i < array.length; i++) {
+		if(array[i].name === filename) {
+			return i;
+		}
+	}
+	return undefined;
+}
+
+function beginWatchFile(i) {
+	fs.watchFile(fparray[i].filename, function(curr, prev) {
+		if(curr.mtime.getTime() == prev.mtime.getTime()) {
+			// console.log("no change");
+			// nochange
+		} else {
+			fparray[i].begin(function(err) {
+				if(err) {
+					console.log(err);
+				}
+			});
+		}
+	});
+}
+
+/* main function */
 fs.readdir(globalConf.fileReader.path, function(err, files) {
 	if(err) {
 		console.log("Can't start, path doesn't exist.");
@@ -60,30 +87,8 @@ fs.readdir(globalConf.fileReader.path, function(err, files) {
 	}
 });
 
-function checkFileInMyArray(array, filename) {
-	for(var i = 0; i < array.length; i++) {
-		if(array[i].name === filename) {
-			return i;
-		}
-	}
-	return undefined;
-}
 
-function beginWatchFile(i) {
-	fs.watchFile(fparray[i].filename, function(curr, prev) {
-		if(curr.mtime.getTime() == prev.mtime.getTime()) {
-			// console.log("no change");
-			// nochange
-		} else {
-			fparray[i].begin(function(err) {
-				if(err) {
-					console.log(err);
-				}
-			});
-		}
-	});
-}
-
+/* test function */
 setInterval(function() {
 	fparray.forEach(function(fp) {
 		console.log(fp.filename + 'has read : ' + fp.lineReaded);
