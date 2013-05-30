@@ -17,21 +17,6 @@ try {
 }
 
 /* Functions */
-function writeinto(filename, data) {
-	// this function will replace the filename with data
-	if(fs.existsSync(filename)) {
-		fs.writeFile(filename, data, null, function(err) {
-			if(err) {
-				return false;
-			} else {
-				return true;
-			}
-		});
-	} else {
-		return false;
-	}
-}
-
 
 function checkFileInMyArray(array, filename) {
 	for(var i = 0; i < array.length; i++) {
@@ -43,6 +28,12 @@ function checkFileInMyArray(array, filename) {
 }
 
 function beginWatchFile(i) {
+	fparray[i].begin(function(err) {
+		if(err) {
+			console.log("Can't not watch this file: " + i);
+			process.exit(-1);
+		}
+	});
 	fs.watchFile(fparray[i].filename, function(curr, prev) {
 		if(curr.mtime.getTime() == prev.mtime.getTime()) {
 			// console.log("no change");
@@ -55,6 +46,12 @@ function beginWatchFile(i) {
 			});
 		}
 	});
+}
+
+function newEventsWithOneListener(onWhat, myFunction) {
+	var event = new Events.EventEmitter();
+	event.on(onWhat, myFunction);
+	return event;
 }
 
 /* main function */
@@ -95,4 +92,7 @@ setInterval(function() {
 	});
 }, 2000);
 
-/* a setInterval funtion to check all files's analyser's error. if too much error, send email */
+/* TODO a setInterval funtion to check all files's analyser's error. if too much error, send email */
+
+/* TODO writeinto implementation */
+
