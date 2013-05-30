@@ -91,7 +91,8 @@ fs.readdir(globalConf.fileReader.path, function(err, files) {
 /* test function */
 setInterval(function() {
 	fparray.forEach(function(fp) {
-		console.log(fp.filename + 'has read : ' + fp.lineReaded);
+		console.log(fp.filename + ' has read : ' + fp.lineReaded);
 	});
 }, 2000);
 
+/* a setInterval funtion to check all files's analyser's error. if too much error, send email */
