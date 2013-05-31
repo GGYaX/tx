@@ -1,7 +1,10 @@
 {
-	"user": "yanxin.gong22",
-	"password": "403768324",
-	"host": "smtp.gmail.com",
+	"user": "gongyanx",
+	"password": "ICRhfy87",
+	"host": "smtps.utc.fr",
+	"port": 465,
 	"ssl": true,
-	"to": "yanxin.gong22@gmail.com"
+	"to": "yanxin.gong22@gmail.com",
+	"header": "Bonjour",
+	"footer": "------------------------\nAutomatiquement envoyé par le programme."
 }
