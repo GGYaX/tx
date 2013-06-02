@@ -68,7 +68,7 @@ fs.readdir(globalConf.fileReader.path, function(err, files) {
 				if(i !== undefined) {
 					var filename = file;
 					console.log(globalConf.fileReader.files);
-					var readFrom = globalConf.fileReader.files[i].readFrom;
+					var readFrom = (globalConf.fileReader.files[i].readFrom < globalConf.fileReader.defaultReadFrom) ? globalConf.fileReader.defaultReadFrom : globalConf.fileReader.files[i].readFrom;
 					console.log('' + globalConf.fileReader.path + filename);
 					fparray.push(new fp.fileParser('' + globalConf.fileReader.path + '/' + filename, readFrom));
 				} else {

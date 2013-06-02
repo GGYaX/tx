@@ -85,10 +85,11 @@
     "files": [
       {
         "name": "somedata.dat",
-        "readFrom": 32
+        "readFrom": 10
       }
     ]
   },
   "acceptErreurRatio": 0.9,
-  "checkErreurInterval": 50
+  "checkErreurInterval": 50,
+  "ticker": 3000
 }
