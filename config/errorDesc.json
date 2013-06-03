@@ -4,6 +4,6 @@
 	"2001": "File not exit",
 	"2002": "Email configure file went wrong",
 	"2003": "Email can't be sent",
-	"3001": "Base test error: idiff + idirect not equals to iglobal",
+	"3001": "Base test error: idiff + idirect not equals to iglobal or iglobal > 1.2 * ie, or idiff > 0.8 * ie",
 	"3002": "Shadow band test error"
 }
