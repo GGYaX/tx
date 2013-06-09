@@ -1,5 +1,4 @@
 {
-  "dateFormat": "yyyymmdd",
   "dataPrecision": 5,
   "tablePrefix": {
     "1000": {
