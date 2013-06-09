@@ -60,16 +60,12 @@ fs.readdir(globalConf.fileReader.path, function(err, files) {
 		console.log("Can't start, path doesn't exist.");
 		process.exit(-1);
 	} else {
-		console.log(files);
 		files.forEach(function(file) {
 			if(file.indexOf('.dat') > -1) {
 				var i = checkFileInMyArray(globalConf.fileReader.files, file);
-				console.log(i);
 				if(i !== undefined) {
 					var filename = file;
-					console.log(globalConf.fileReader.files);
 					var readFrom = (globalConf.fileReader.files[i].readFrom < globalConf.fileReader.defaultReadFrom) ? globalConf.fileReader.defaultReadFrom : globalConf.fileReader.files[i].readFrom;
-					console.log('' + globalConf.fileReader.path + filename);
 					fparray.push(new fp.fileParser('' + globalConf.fileReader.path + '/' + filename, readFrom));
 				} else {
 					var filename = file;
