@@ -88,7 +88,7 @@ fs.readdir(globalConf.fileReader.path, function(err, files) {
 /* test function */
 setInterval(function() {
 	fparray.forEach(function(fp) {
-		console.log(fp.filename + ' has read : ' + fp.lineReaded);
+		// console.log(fp.filename + ' has read : ' + fp.lineReaded);
 	});
 }, 2000);
 
