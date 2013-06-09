@@ -4,6 +4,7 @@
 	"host": "smtps.utc.fr",
 	"port": 465,
 	"ssl": true,
+	"from": "Data Gisol info <info@datagisol.com>",
 	"to": "yanxin.gong22@gmail.com",
 	"header": "Bonjour",
 	"footer": "------------------------\nAutomatiquement envoyé par le programme.\n------------------------\n"
