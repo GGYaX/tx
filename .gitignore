@@ -1,2 +1,5 @@
 *.dat
 *.pdf
+*.ppt*
+*.doc*
+.DS_Store
