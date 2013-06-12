@@ -85,6 +85,14 @@
       {
         "name": "somedata.dat",
         "readFrom": 10
+      },
+      {
+        "name": "somedata2.dat",
+        "readFrom": 11
+      },
+      {
+        "name": "somedata3.dat",
+        "readFrom": 13
       }
     ]
   },
