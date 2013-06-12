@@ -84,7 +84,7 @@
     "files": [
       {
         "name": "somedata.dat",
-        "readFrom": 10
+        "readFrom": 4
       }
     ]
   },
