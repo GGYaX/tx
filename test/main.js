@@ -66,11 +66,13 @@ fs.readdir(globalConf.fileReader.path, function(err, files) {
 				if(i !== undefined) {
 					var filename = file;
 					var readFrom = (globalConf.fileReader.files[i].readFrom < globalConf.fileReader.defaultReadFrom) ? globalConf.fileReader.defaultReadFrom : globalConf.fileReader.files[i].readFrom;
-					fparray.push(new fp.fileParser('' + globalConf.fileReader.path + '/' + filename, readFrom));
+					var serie = globalConf.fileReader.files[i].serie || globalConf.fileReader.defaultSerie;
+					fparray.push(new fp.fileParser('' + globalConf.fileReader.path + '/' + filename, serie, readFrom));
 				} else {
 					var filename = file;
 					var readFrom = globalConf.fileReader.defaultReadFrom;
-					fparray.push(new fp.fileParser('' + globalConf.fileReader.path + '/' + filename, readFrom));
+					var serie = globalConf.fileReader.defaultSerie;
+					fparray.push(new fp.fileParser('' + globalConf.fileReader.path + '/' + filename, serie, readFrom));
 				}
 			}
 		});

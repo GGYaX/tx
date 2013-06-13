@@ -81,18 +81,22 @@
   "fileReader": {
     "path": "/Users/yanxingong/Documents/UTC/P2013/TX/test",
     "defaultReadFrom": 4,
+    "defaultSerie": "1000",
     "files": [
       {
         "name": "somedata.dat",
-        "readFrom": 10
+        "readFrom": 10,
+        "serie": "1000"
       },
       {
         "name": "somedata2.dat",
-        "readFrom": 11
+        "readFrom": 11,
+        "serie": "1000"
       },
       {
         "name": "somedata3.dat",
-        "readFrom": 13
+        "readFrom": 13,
+        "serie": "1000"
       }
     ]
   },
